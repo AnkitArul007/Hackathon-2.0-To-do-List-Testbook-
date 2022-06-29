@@ -196,7 +196,7 @@ section .list:hover .task-features{
 footer{
     position: relative;
     bottom: 10px;
-    left: 40%;
+    text-align: center;
     pointer-events: none;
     opacity: 0.3;
 }
