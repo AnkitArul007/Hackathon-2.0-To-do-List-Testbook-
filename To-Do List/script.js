@@ -50,7 +50,7 @@ function showTask(){
 
     // IF there are no tasks remaining in the section
     if (taskArr.length == 0){
-        listSection.innerText = "You Do Not Have any Pending Tasks!";  
+        listSection.innerText = "You do not have any Pending Tasks!";  
         listSection.classList.add('NewHead');
     }else{
         listSection.classList.remove('NewHead');
@@ -94,16 +94,6 @@ function editTask(index) {
 
 }
 
-function deleteTask(index){
-
-    let getlocalStorage = localStorage.getItem("New Task");
-    taskArr = JSON.parse(getlocalStorage);
-    taskArr.splice(index, 1);
-    localStorage.setItem("New Task", JSON.stringify(taskArr)); //transforming js object into JSON string format
-    showTask(); 
-}
-
-
 let flag = false;
 function checkedTask(index){
 
@@ -117,5 +107,17 @@ function checkedTask(index){
     }
 
 }
+
+
+function deleteTask(index){
+
+    let getlocalStorage = localStorage.getItem("New Task");
+    taskArr = JSON.parse(getlocalStorage);
+    taskArr.splice(index, 1);
+    localStorage.setItem("New Task", JSON.stringify(taskArr)); //transforming js object into JSON string format
+    showTask(); 
+}
+
+
 
 
