@@ -9,11 +9,7 @@ const listSection = document.querySelector('.list-section');
 let taskArr = [];
 let userData;
 
-
-
 window.onload = showTask();
-
-
 
 addTaskInput.oninput = () => {
     let userData = addTaskInput.value; //accessing userdata
@@ -41,7 +37,6 @@ addTaskBtn.addEventListener('click', function(){
 
 })
 
-
 //creating a function to show the tasks::
 
 function showTask(){
@@ -61,8 +56,6 @@ function showTask(){
         listSection.classList.remove('NewHead');
     }
 
-    // <p class="todo-task" id="theTask">${element}</p>
-
     let newListRow = '';
     taskArr.forEach((element, index) => {
         newListRow +=
@@ -81,11 +74,10 @@ function showTask(){
 
 }
 
-const theTask = document.querySelectorAll('.todo-task')
-const edit = document.querySelectorAll('.editing');
-
 
 function editTask(index) {
+    let getlocalStorage = localStorage.getItem("New Task");
+    taskArr = JSON.parse(getlocalStorage);
     const classListCont = document.querySelectorAll(".list");
     if (classListCont[index].lastElementChild.firstElementChild.innerText == "edit"){
         classListCont[index].firstElementChild.removeAttribute("readonly", "readonly");
@@ -97,11 +89,10 @@ function editTask(index) {
         classListCont[index].firstElementChild.classList.remove('focus');
         classListCont[index].lastElementChild.firstElementChild.innerHTML = "edit";
     }
+    taskArr[index] = classListCont[index].firstElementChild.value;
+    localStorage.setItem("New Task", JSON.stringify(taskArr)); //transforming js object into JSON string format
 
 }
-
-// onclick = "editTask(${index})"
-//function to delete the selected task::
 
 function deleteTask(index){
 

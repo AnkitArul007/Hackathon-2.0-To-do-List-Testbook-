@@ -78,9 +78,7 @@ body{
     font-size: 25px;
     border-radius: 5px;
     outline: none;
-    border: none;
-    
-    
+    border: none;  
 }
 
 #Add-task-btn{
@@ -132,7 +130,7 @@ section .list input{
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
-    transition: 0.7s ease-in-out;
+    transition: 1s ease-in-out;
     border: none;
     background: inherit;
     outline: none;
@@ -154,12 +152,11 @@ section .list{
 section .list .todo-task.decorate{
     color: rgb(0,0,0,0.5);
     opacity: 0.5;
-    text-decoration: line-through;
+    text-decoration: line-through;   
 }
 
 .focus{
     color: #1F75FE;
-    background-color: #fff;
     user-select: text;
 }
 
