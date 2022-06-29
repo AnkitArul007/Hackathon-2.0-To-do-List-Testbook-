@@ -203,4 +203,5 @@ footer{
     bottom: 10px;
     left: 500px;
     pointer-events: none;
+    opacity: 0.3;
 }

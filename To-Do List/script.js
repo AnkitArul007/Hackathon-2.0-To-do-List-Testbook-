@@ -50,7 +50,7 @@ function showTask(){
 
     // IF there are no tasks remaining in the section
     if (taskArr.length == 0){
-        listSection.innerText = "You Do Not Have any Tasks Pending";  
+        listSection.innerText = "You Do Not Have any Pending Tasks!";  
         listSection.classList.add('NewHead');
     }else{
         listSection.classList.remove('NewHead');
